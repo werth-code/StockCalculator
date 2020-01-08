@@ -104,7 +104,7 @@ let stockUSD  = new Stocks('Cash', '', '', .10) /* I want this to be user genera
 
 
 function buttonClickHandler(event) {
-    while (resultDiv.firstChild) { // equivalent to saying.. as long as there is a child..
+    while (resultDiv.firstChild) { // Equivalent to saying.. as long as there is a child..
         // Remove it
         resultDiv.removeChild(resultDiv.firstChild);
     }
