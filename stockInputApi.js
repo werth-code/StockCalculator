@@ -20,7 +20,7 @@ submitTickerButton.addEventListener("click", getData)
 let nameTopChart = "Blank"; // Name of the chart
 const xLabels = []; // chart years
 const yLabels = []; // chart trade price
-let dataArray = [1, 2, 3];
+let dataArray = [1, 2, 3]; // Sample data
 
 //Called immediately so that a chart is visible upon loading the page.
 chartIt();
