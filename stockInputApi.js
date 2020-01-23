@@ -20,7 +20,7 @@ submitTickerButton.addEventListener("click", getData)
 let nameTopChart = "Blank"; // Name of the chart
 const xLabels = []; // chart years
 const yLabels = []; // chart trade price
-let dataArray = [1, 2, 3]; //
+let dataArray = []; //
 
 //Called immediately so that a chart is visible upon loading the page.
 chartIt();
@@ -37,12 +37,11 @@ async function getData() {
     console.log("ARRAY OF DATE KEYS: ", arrayOfDateKeys, timeData);
     dataArray = arrayOfDateKeys.map(dateKey => timeData[dateKey]['4. close']);
 
-    // nameTopChart.splice(0,1,returnedData['Meta Data']['2. Symbol']);
-    xLabels.splice(0,1, returnedData['Time Series (Daily)']);//price?
-    yLabels.splice(0,1, returnedData['Time Series (Daily)']);
 
-
-    chartIt();
+// nameTopChart.splice(0,1,returnedData['Meta Data']['2. Symbol']);
+// xLabels.splice(0,1, returnedData['Time Series (Daily)']);//price?
+// yLabels.splice(0,1, returnedData['Time Series (Daily)']);
+     chartIt();
 
 }  // xLabels[0].for (const key in object) {
     //if (object.hasOwnProperty(key)) {
@@ -57,7 +56,7 @@ async function getData() {
 
 function chartIt () {
     const ctx = document.getElementById('myChart').getContext('2d');
-    console.log("NEW DATA!!", nameTopChart, '\n', "Data: ", dataArray);
+    console.log(nameTopChart, '\n', "Data: ", dataArray);
     const myChart = new Chart(ctx, {
         type: 'line',
         data: {
